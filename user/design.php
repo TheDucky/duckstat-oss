@@ -1,3 +1,6 @@
+<?php
+require "../check.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -31,6 +34,7 @@
                             <li class="nav-item" role="presentation"></li>
                             <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Menu</a>
                                 <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Account</a></div>
+                                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#site">Site Settings</a></div>
                             </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self">
@@ -38,7 +42,7 @@
                         </form><a class="btn btn-light action-button" role="button" href="validation/logout.php">Sign Out</a></div>
                 </div>
             </nav>
-            <?php
+        <?php
             ob_start();
             require "validation/app.ini"; # Checks that the file exists, but doesn't execute it
             ob_end_clean();
@@ -142,7 +146,13 @@
                     document.getElementById("form2").submit();
                 }
             </script>
-        </div></div>
+            <hr class="text-center">
+                    <h2 class="text-center">Site Settings</h2>
+
+                        <p>Here you can customize your Statuspage!</p>
+        </div>
+        
+        </div>
     <div class="footer-dark">
         <footer>
             <div class="container">
